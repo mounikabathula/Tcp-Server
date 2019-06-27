@@ -1,5 +1,5 @@
 const Net =require("net");//net module to connect to tcp
-const JsonSocket = require('json-socket')
+const JsonSocket = require('json-socket')//json socket to create connection
 
 const port =8080;
 
@@ -7,7 +7,7 @@ const port =8080;
 const server = new Net.Server();
 
 
-server.listen(port,()=>{console.log("Server running at port ",port);
+server.listen(port,()=>{console.log("Server running at port",port);
 })
 
 // When a client requests a connection with the server, the server creates a new
