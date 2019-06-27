@@ -10,28 +10,18 @@ const server = new Net.Server();
 server.listen(port,()=>{console.log("Server running at port ",port);
 })
 
-
-
 // When a client requests a connection with the server, the server creates a new
 // socket dedicated to that client.
 server.on('connection',(socket)=>{
     console.log("A new connection has been established.");
-    
-
-
-
 
     socket = new JsonSocket(socket); //Now we've decorated the net.Socket to be a JsonSocket
     socket.on('message', function(message) {
         var result = message;
         console.log(result);
         
-      
-        
         socket.sendEndMessage({result: message.action});
     });
-
-
 
  // When the client requests to end the TCP connection with the server, the server
  // ends the connection.
