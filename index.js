@@ -1,4 +1,4 @@
-const Net =require("net");//net modeule to connect to tcp
+const Net =require("net");//net module to connect to tcp
 const JsonSocket = require('json-socket')
 
 const port =8080;
