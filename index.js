@@ -26,7 +26,7 @@ server.on('connection',(socket)=>{
  // When the client requests to end the TCP connection with the server, the server
  // ends the connection.
  socket.on('end', function() {
-   // console.log('Closing connection with the client');
+    console.log('Closing connection with the client');
 });
   // Don't forget to catch error, for your own sake.
   socket.on('error', function(err) {
